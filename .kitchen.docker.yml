@@ -45,6 +45,8 @@ suites:
       - recipe[test::install_apt_https]
       - recipe[apt-docker]
       - recipe[test::install_docker]
+    excludes:
+      - ubuntu-15.04 # test fails, no candidate version available for experimental
     attributes:
       apt-docker:
         repos:
